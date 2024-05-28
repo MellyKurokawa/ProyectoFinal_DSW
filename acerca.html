@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Aquí están los elementos de diseño de la página de acerca -->
+    <style> 
+   
+   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Poetsen+One&family=Roboto+Slab&family=Sedgwick+Ave+Display&family=Stint+Ultra+Condensed&family=Varela+Round&display=swap');
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url(imagenes/azul.jpg);
+    background-size: cover;
+    background-position: center;
+    line-height: 1.6;
+}
+
+h1{
+    text-align: center;
+}
+
+h1, h2, h3{
+    color: white;
+    font-family: "Poetsen One", sans-serif;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-image: url("imagenes/noche.jpg");
+    background-size: center;
+    background-position: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eaeaea;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Domine";
+    font-weight: 400;
+   
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    color: white;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #e98252;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e98252;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d56b3c;
+}
+
+/* Categories Section diseño */
+.categories {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.category-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.category-item {
+    text-align: center;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.info-item {
+    width: 45%;
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 60px 0;
+}
+
+.product {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin-bottom: 20px;
+}
+
+img:hover{
+    padding: 30px;
+}
+li{
+    text-align: center;
+}
+
+/* Esta parte es para la transición del texto */
+p, li{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <!-- Header de la página acerca, donde se encuentra el menú de opciones -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Martha's Travel</div>
+                <ul class="nav-links">
+                    <li><a href="japon.html" class="titulo">Acerca de Japón </a></li>
+                  
+                    <li><a href="formularioRegistro.html">Formulario</a></li>
+                    <li><a href="servicios.html">Destinos</a></li>
+                    <li><a href="menu.html">Menú</a></li>
+                </ul>
+            </nav>
+            <!-- En está página utilizamos múltiples div, los cuales son fundamentales para estructurar y organizar el contenido de la página -->
+
+            <!-- En este div se coloca la información de acerca de nosotros -->
+            <div class="hero" id="somos">
+                <h1>Acerca de Nosotros</h1>
+                <p>Martha's Travel, es una empresa líder en el sector del turismo en Japón, dedicada a ofrecer experiencias de viaje únicas<br> 
+                e inolvidables a visitantes de todo el mundo.Fundada con la misión de compartir la rica herencia cultural, la belleza natural<br>
+                y las innovaciones modernas de Japón.</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Se encuetra con el contenido del menú -->
+    <main>
+        <section class="categories">
+            <div class="container" id="contacto">
+                <h2>Información de contacto</h2><br>
+                <div class="category-items">
+
+                    <!-- En estos divs se encuentra nuestra información de contacto acompañado de imágenes -->
+                    <div class="category-item">
+                        <img src="imagenes/ubi.png" width="30" height="30" id="ubicacion">
+                        <h2>Ubicación</h2>
+                        <p>Balderas 27, Colonia Centro<br>
+                            Cuauhtémoc, Ciudad de México,<br> 
+                            CDMX, Mexico 06040 México</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="imagenes/telefono.png" width="30" height="30">
+                        <h2>Teléfono</h2>
+                        <p>Tel. 664 234 6735</p>
+                    </div>
+                    <div class="category-item">
+                        <img src="imagenes/contacto.png" width="30" height="30">
+                        <h2>Contacto</h2>
+                        <p>Encuentranos en:<br>
+                        Instagram: Martas_Travel<br>
+                        X: @MartasTravel<br>
+                        Facebook: Martha's Travel<br></p>
+                    </div>
+                    <img src="imagenes/templo.jpg" width="600" height="300">
+                </div>
+
+                <!-- En estos divs se encuentran las activiades y servicios que ofrecemos-->
+                <div class="info">
+                    <div class="info-item" id="actividades">
+                        <h2>Nuestros servicios</h2>
+                        <p>Ofrecemos una gran variedad de servicios turísticos:</p>
+                        <li>Viajes personalizados</li>
+                        <li>Tours guiados</li>
+                        <li>Guías Intérpretes</li>
+                        <li>Tours gastronímicos</li>
+                        <li>Tours de historia y patrimonio</li>
+                        <li>Tours de anime y manga</li>
+                        <img src="imagenes/cocineros.jpg" width="" height="200" >
+                    </div>
+                    <div class="info-item">
+                        <h2>Nuestras actividades</h2>
+                        <p>Ofrecemos una amplia gama de actividades:</p>
+                        <li>Ruta de los Samuráis</li>
+                        <li>Vestimenta tradicional</li>
+                        <li>Senderismo en el Monte Fuji</li>
+                        <li>Ciclismo en Kyoto</li>
+                        <li>Fabricación de Katanas</li>
+                        <li>Festivales Tradicionales</li>
+                        <img src="imagenes/festival.jpg" width="" height="200">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h1>Nuestro equipo y clientes</h1>
+        <section class="featured-products">
+            <!-- Por último en estos divs, se encuentra la información de los guías y clientes -->
+            <div class="container" id="equipo">
+                <div class="product">
+                    <img src="imagenes/guias.jpg" alt="Gold & Black Pottery" height="400" width="600" id="guias">
+                    <h3>Nuestro Equipo</h3>
+                    <p>Nuestro equipo está conformado por profesionales que tienen una granpasión por el turismo y son expertos en la cultura japonesa.<br> 
+                       Contamos con guías locales con un amplio conocimiento tanto del país como de su historia, nuestros asesores de viajes que <br>
+                       trabajan estrechamente contigo para planificar hasta el más mínimo detalle de tu viaje y disfutes al máximo.</p>
+                </div>
+                <div class="product">
+                    <img src="imagenes/turistas.jpg" alt="Orange Ceramic" height="300" width="400">
+                    <h3>Testimonios</h3>
+                    <p>Nuestros clientes viven experiencias positivas y están satisfechos por nuestros servicios. Nos complace recibir comentarios que nos <br>
+                       destacan por el nivel de profesionalismos de nuestros de nuestros guías, la calidad de nuestros servicios y la gran cantidad de las<br> 
+                       experiencias que ofrecemos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+</body>
+</html>
