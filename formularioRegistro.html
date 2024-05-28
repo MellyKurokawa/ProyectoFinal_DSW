@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    
+  <!--Melissa Fernanda Gallegos Rojas-->
+    <!--Joselyn Alvarado Gutiérrez-->
+    <!--Carina Medrano Cárdenas-->
+
+    <!-- Aquí utilizamos table para crear tablas en una página web -->
+    <!-- En este caso dentro de la tabla agregamos el formulario de registro del cliente  -->
+    <table>
+        <form class="" action="php/formularioRegistro.php" method="post" id="formulario">
+
+          <!-- Dentro de este div ingresamos el título de la página -->
+          <div class="texto">
+            <h1>Marta's Travel</h1>
+            <h3>Inscripción del tour</h3>
+          </div>
+          <!-- Tr define una fila en la tabla y td define una celda-->
+          <!-- En la primera fila, tenemos el nombre y los apellidos, que ambos son obligatorios y tienen la función de que solo se ingresen mayúsculas -->
+          <tr>
+            <td>Nombre <br><input type="text" name="nombre" class="inf" oninput="convertirMayusculasSoloLetras(this)" required/></td>
+            <td>Apellidos <br><input type="text" name="apellido" class="inf" oninput="convertirMayusculasSoloLetras(this)" required/></td>
+          </tr>
+          <!-- En la segunda fila tenemos la edad y el sexo, en la edad tiene un mínimo y máximo de edad a ingresar, en el sexo elige el usuario elige la opción; ambos son requeridos -->
+          <tr>
+            <td>Edad <br><input type="number" name="edad" class="inf" min="18" max="60" required/></td>
+            <td>Sexo <br><select name="sexo" class="inf2" required>
+              <option value= "femenino">Femenino</option>
+              <option value= "masculino">Masculino</option>
+            </select></td>
+          </tr>
+          <!-- En la tercera fila tenemos un combobox, en el cual el usuario puede seleccionar su destino, además de que este campo es obligatorio -->
+          <tr>
+            <td>Ciudad <br><select name="ciudad"class="inf2" id= "Ciudad" onchange="habilitar()" required>
+              <option value= "Tokio">Tokio</option>
+              <option value= "Kioto">Kioto</option>
+              <option value= "Sapporo">Sapporo</option>
+              <option value= "Yokohama">Yokohama</option>
+              <option value= "Osaka">Osaka</option>
+              <option value= "Aoshima">Aoshima</option>
+            </select></td>
+          </tr>
+          <!-- En la cuarta fila, tenemos que el usuario ingrese su teléfono, y aquí únicamente puede ingresar números, además de que es obligatorio que lo ingrese -->
+          <tr><td>
+            <td>Celular: <br><input type="tel" name="celular" id="phone" class="inf" oninput="soloNumeros(this)" required ></td>
+          </tr></td>
+          <!-- En la quinta fila, tenemos un combobox en el cual el usuario elige si quiere o no transporte y también tenemos los comentarios, en los cuales sólo se imgresa con mayúscula -->
+          <tr>
+            <td>Transporte: <br><select name="transporte"class="inf2" id="Transporte"  >
+              <option value= "si">Si</option>
+              <option value= "no">No</option></td>
+            <td rowspan="2">Comentarios: <br><textarea name="comentarios" rows="7" cols="30" class="com" oninput="convertirMayusculasSoloLetras(this)"></textarea></td>
+          </tr>
+          <!-- En la sexta fila, tenemos las camisas, en este combobox, selecciona si la quiere o no, en el caso de que seleccione que no quiere camisa, la talla desaparece -->
+          <tr>
+            <td>Camisa: <br><select name="camisa" class="inf2" onchange="aparecer()" id= "camisas">
+              <option value= "si">Si</option>
+              <option value= "no">No</option></select></td>
+          </tr>
+          <!-- En la última fila, tenemos la talla, la cual se oculta si en el combobox anterior se selecciona la opción "no", pero si si, se despliega -->
+          <tr>
+            <td>Talla: <br><select name="talla"class="inf2" id="talla">
+              <option value= "S">S</option>
+              <option value= "M">M</option>
+              <option value= "L">L</option>
+              <option value= "XL">XL</option></select></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><input type="submit" name="enviar" class="boton"> </td>
+          </tr>
+        </form>
+      </table>
+  
+      <!-- Aquí están los elementos de diseño de la página del formulario -->
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Poetsen+One&family=Roboto+Slab&family=Sedgwick+Ave+Display&family=Stint+Ultra+Condensed&family=Varela+Round&display=swap');
+      
+      body{
+          background-image: url(imagenes/aqua.jpg);
+          background-size: cover;
+          font-family: "Open Sans", sans-serif;
+          font-size: 15px;
+        }
+        table{
+          margin: auto;
+          background: rgba(133, 235, 211, 0.744);
+          border-radius: 10px;
+          border-spacing: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        
+        .texto{
+          text-align: center;
+          font-family: 'Domine';
+          font-size: 16px;
+        }
+      
+        .boton{
+          background-color: #05C28F;
+          -webkit-transition: background-color 1s linear;
+          transition: background-color 1s linear;
+          font-size: 20px;
+          color: white;
+        }
+
+        .boton:hover{
+         background-color: #ADEDDC ;
+        }
+        
+        .com{
+            width: 230px;
+    text-transform: uppercase;
+  }
+  .talla{
+    display: none;
+    padding: 6px;
+    width: 240px;
+  }
+  
+  h1, h3 {
+  animation-duration: 2s;
+  animation-name: slidein;
+  color: beige;
+  font-size: 30px;
+  font-family: "Poetsen One", sans-serif;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+</style>
+
+<script type="text/javascript" src="js/formularioRegitro.js"></script>
+
+</body>
+</html>
