@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Martha's Travel</title>
+<link rel="stylesheet" href="css/estancias.css"/>
+
+</head>
+<body>
+<header class="header">
+  <h1>Martha's Travel</h1>
+  <!-- Aquí usamos los nav para definir una sección de navegación en un documento, en este caso los links para las demás páginas  -->
+  <nav>
+    <a href="servicios.html">Destinos</a>
+    <a href="comida.html">Comida</a>
+    <a href="estancias.html">Estancias</a>
+    <a href="paquetes.html">Paquetes</a>
+    <a href="menu.html">Menú</a>
+    <a href="#"><i class="fa fa-shopping-cart"></i></a>
+  </nav>
+</header>
+
+<header class="fotos">
+<section class="section">
+  <!-- En este div añadimos imagenes para crear el carrousel de la página -->
+  <div class="carousel-container">
+      <img src="imagenes/japon3.jpg" alt="Imagen 1" class="carousel-slide">
+      <img src="imagenes/japon2.jpg" alt="Imagen 2" class="carousel-slide">
+      <img src="imagenes/japon.jpg" alt="Imagen 3" class="carousel-slide">
+      <img src="imagenes/japon4.jpg" alt="Imagen 3" class="carousel-slide">
+    
+  </div>
+  <button class="carousel-button right" onclick="moveSlide(1)">&#10095;</button>
+
+</section>
+</header>
+
+ <!-- Usamos un section para establecer las secciones en la página -->
+   <section class="subtitulo">
+  <h2> Descansar es importante.. </h2>
+  
+</section>
+
+<!-- En este section hablamos sobre las estancias que ofrecemos -->
+<section class="section">
+  <h3> Te proporcionamos 3 estancias para que descanses</h3>
+  <p>El viajero, cansado después de un trayecto aparentemente interminable, normalmente, opta por un cuerpo de agua para intentar descansar, relajarse y hacer la transición de zombi a algo que parecido un ente viviente, lo más normal sería una ducha, un baño o incluso una sauna con su piscina de agua fría.</p>
+  <a href="japon.html">Acerca de Japón</a>
+</section>
+
+<section class="products">
+
+  <!-- En este div, se utiliza para deslizar las imágenes correspondientes a una de las estancias -->
+  <div class="product" id="slideshow">
+    
+    <img src="estancias/estancia1.JPG" alt="About me" class="active">
+    <img src="estancias/estancia1.5.jPG" alt="About me" > 
+    <img src="estancias/estancia1.2.jPG" alt="About me" > 
+    <img src="estancias/estancia1.3.jPG" alt="About me" > 
+    <img src="estancias/estancia1.4.jPG" alt="About me" > 
+  <center>  <button id="prevButton" class="button" onclick="showPrevImage()"><</button>
+  <button id="nextButton" class="button" onclick="showNextImage()">></button> </center>
+    <strong><p>Cabaña en Numazu, Japón</p></strong>
+    <p>Puesta de sol en el puerto donde se puede hacer una barbacoa con gibier local.</p>
+  </div>
+
+ 
+   <!-- En este div, se utiliza para deslizar las imágenes correspondientes a una de las estancias -->
+  <div class="product" id="slides">
+    
+    <img src="estancias/estancia2.JPG" alt="About me" class="active2">
+    <img src="estancias/estancia2.2.JPG" alt="About me" > 
+    <img src="estancias/estancia2.3.JPG" alt="About me" > 
+    <img src="estancias/estancia2.4.JPG" alt="About me" > 
+    <img src="estancias/estancia2.5.jPG" alt="About me" > 
+  <center>  <button id="prevButton" class="button" onclick="estanciaDIV2()"><</button>
+  <button id="nextButton" class="button" onclick="estanciaDIVdos()">></button> </center>
+    <strong><p>Cabaña en Numazu, Japón</p></strong>
+    <p>Puesta de sol en el puerto donde se puede hacer una barbacoa con gibier local.</p>
+  </div>
+
+    <!-- En este div, se utiliza para deslizar las imágenes correspondientes a una de las estancias -->
+  <div class="product" id="slide">
+    
+    <img src="estancias/estancia3.JPG" alt="About me" class="active3">
+    <img src="estancias/estancia3.2.JPG" alt="About me" > 
+    <img src="estancias/estancia3.3.JPG" alt="About me" > 
+    <img src="estancias/estancia3.4.JPG" alt="About me" > 
+    <img src="estancias/estancia3.5.JPG" alt="About me" > 
+  <center>  <button id="prevButton" class="button" onclick="estanciaDIV3()"><</button>
+  <button id="nextButton" class="button" onclick="estanciaDIVtres()">></button> </center>
+    <strong><p>Villa en Ito, Japón</p></strong>
+    <p>Playliving IZU - Hotel con Onsen y vistas al mar.</p>
+  </div>
+
+</section>
+
+
+
+<footer class="footer">
+  <p>&copy; Martha's Travel</p>
+</footer>
+<script type="text/javascript" src="js/estancias.js"></script>
+<script type="text/javascript" src="js/Practica29.js"></script>
+</body>
+</html>
